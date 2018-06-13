@@ -49,7 +49,7 @@ export class NgxAutoScroll implements AfterContentInit, OnDestroy {
     }
 
     @HostListener("scroll")
-    private scrollHandler(): void {
+    public scrollHandler(): void {
         const scrollFromBottom = this.nativeElement.scrollHeight - this.nativeElement.scrollTop - this.nativeElement.clientHeight;
         this._isLocked = scrollFromBottom > this.lockYOffset;
     }
